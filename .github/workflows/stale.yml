@@ -47,3 +47,8 @@ jobs:
           audit-only: true
           should-notify: true
           argon-token: "${{ secrets.ARGON_TOKEN }}"
+
+      - name: SBOM Action
+        uses: anchore/sbom-action@v0
+        with:
+          path: ./
